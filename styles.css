@@ -57,9 +57,9 @@ input[type="text"], input[type="number"] {
     cursor: pointer;
 }
 
-.btns>button:hover {
-    filter: brightness(.9);
-    transition: .25s;
+.btns>button:hover, #dltBtn:hover {
+    filter: brightness(1.2);
+    transition: .2s;
 }
 
 .btns>button:disabled {
@@ -90,6 +90,28 @@ thead {
     color: #fff;
 }
 
-tbody>tr {
+tbody tr {
     background-color: antiquewhite;
+    text-align: center;
+}
+
+#readCell {
+    cursor: pointer;
+}
+
+#readCell:hover {
+    background-color: darkorange;
+    color: #fff;
+    transition: .2s;
+    font-weight: bold;
+}
+
+#dltBtn {
+    border: none;
+    background-color: darkred;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
 }

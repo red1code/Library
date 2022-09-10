@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
+    <link rel="shortcut icon" href="./assets/library-icon.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <script src="app.js" defer></script>
 </head>
@@ -20,11 +21,11 @@
             </div>
             
             <div class="form-group">
-                <label for="book-title" class="formbuilder-text-label">
+                <label for="bookTitle" class="formbuilder-text-label">
                     Book title<span class="formbuilder-required">*</span>
                 </label>
                 <br>
-                <input type="text" placeholder="Enter a book title" class="form-control" name="book-title"
+                <input name="bookTitle" type="text" placeholder="Enter a book title" class="form-control"
                     id="book-title" required="required">
             </div>
 
@@ -33,16 +34,16 @@
                     Author<span class="formbuilder-required">*</span>
                 </label>
                 <br>
-                <input type="text" placeholder="Enter the author's name here" class="form-control" name="author"
+                <input name="author" type="text" placeholder="Enter the author's name here" class="form-control"
                     id="author" required="required">
             </div>
 
             <div class="form-group">
-                <label for="pages-number" class="formbuilder-number-label">
+                <label for="pagesNumber" class="formbuilder-number-label">
                     Number of pages<span class="formbuilder-required">*</span>
                 </label>
                 <br>
-                <input type="number" class="form-control" name="pages-number" value="0" id="pages-number" required="required">
+                <input name="pagesNumber" type="number" class="form-control" value="" id="pages-number" required="required">
             </div>
 
             <div class="form-group">
@@ -62,7 +63,7 @@
             </div>
 
             <div class="btns">
-                <button type="submit" class="submit-btn" id="submit-btn">Submit</button>
+                <button type="submit" class="submit-btn" id="submit-btn" onsubmit="submitBTN(newBookForm)">Submit</button>
                 <button type="reset" class="reset-btn" id="reset-btn">Reset</button>
             </div>
         </form>
@@ -72,11 +73,11 @@
             <table class="box-shadow">
                 <thead>
                     <tr>
-                        <th>Title</th><th>Author</th><th>Pages</th><th>Read</th>
+                        <th>Title</th><th>Author</th><th>Pages</th><th>Read</th><th></th>
                     </tr>
                 </thead>
-                <tbody id="tbody">
-                </tbody>
+                
+                <tbody id="tbody"></tbody>
             </table>
         </div>
     </main>
